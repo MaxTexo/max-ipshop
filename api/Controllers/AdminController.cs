@@ -18,4 +18,10 @@ public class AdminController(IUnitOfWork uow, IMapper mapper) : ApiBaseControlle
 
         return BadRequest();
     }
+
+    [HttpGet("test")]
+    public async Task<ActionResult> TestDeployment()
+    {
+        return Ok(new { Message = "Det funkar!! Otroligt!!" });
+    }
 }
